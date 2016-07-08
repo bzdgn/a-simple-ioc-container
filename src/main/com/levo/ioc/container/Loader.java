@@ -15,14 +15,15 @@ public class Loader {
 	
 	public Map<Class, Registration> loadConfiguration(String filename) throws IoCException {
 		
-		Map<Class, Registration> registrations = new HashMap<>();
+		Map<Class, Registration> registrations = new HashMap<Class, Registration>();
 		
 		try {
 			Path path = FileSystems.getDefault().getPath(filename);
 			String contents = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
 			ObjectMapper mapper = new ObjectMapper();
 			
-			List<Registration> parsedReg = mapper.readValue(contents, mapper.getTypeFactory().constructCollectionLikeType(List.class, Registration.class));
+			List<Registration> parsedReg = mapper.readValue(contents, mapper.getTypeFactory().constructCollectionType(List.class, Registration.class));
+			
 			for(Registration r : parsedReg) {
 				Class<?> cls = Class.forName(r.getType());
 				registrations.put(cls, r);	// put the class - registration key-value to the HashMap

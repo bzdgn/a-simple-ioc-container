@@ -1,0 +1,46 @@
+[
+	{
+		"type" : "com.levo.testing.Drivable",
+		"mapTo": "com.levo.testing.Truck",
+		"singleton": false,
+		"constructorParams": [
+			{
+				"name": "age",
+				"value": 23
+			}
+		]
+	},
+	{
+		"type" : "com.levo.testing.Logger",
+		"mapTo": "com.levo.testing.FileLogger",
+		"singleton": false,
+		"constructorParams": [
+			{
+				"name": "fileName",
+				"value": "someFileName.txt"
+			}
+		]
+	},
+	{
+		"type" : "com.levo.testing.SingleCtorWithFixedArgIntf",
+		"mapTo": "com.levo.testing.SingleCtorWithFixedArgIntfImpl",
+		"singleton": false,
+		"constructorParams": [
+			{
+				"name": "value",
+				"value": 23
+			}
+		]
+	},
+	{
+		"type" : "com.levo.testing.SingleCtorWithSingleFixedArgAndSingleReferenceArgIntf",
+		"mapTo": "com.levo.testing.SingleCtorWithSingleFixedArgAndSingleReferenceArgIntfImpl",
+		"singleton": false,
+		"constructorParams": [
+			{
+				"name": "value",
+				"value": "Value"
+			}
+		]
+	}
+]
