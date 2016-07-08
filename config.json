@@ -1,12 +1,12 @@
 [
 	{
-		"type" : "com.levo.ioc.IMeeting",
-		"mapTo": "com.levo.ioc.Meeting",
+		"type" : "com.levo.ioc.stuff.IMeeting",
+		"mapTo": "com.levo.ioc.stuff.Meeting",
 		"singleton": false
 	},
 	{
-		"type" : "com.levo.ioc.IMeetingService",
-		"mapTo": "com.levo.ioc.MeetingService",
+		"type" : "com.levo.ioc.stuff.IMeetingService",
+		"mapTo": "com.levo.ioc.stuff.MeetingService",
 		"singleton": false
 	}
 ]

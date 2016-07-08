@@ -1,4 +1,6 @@
-package com.levo.ioc;
+package com.levo.ioc.container;
+
+import com.levo.stuff.IMeeting;
 
 public class Container {
 

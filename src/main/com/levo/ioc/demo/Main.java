@@ -1,4 +1,7 @@
-package com.levo.ioc;
+package com.levo.ioc.demo;
+
+import com.levo.ioc.container.Container;
+import com.levo.ioc.container.IoCException;
 
 /*
  * [1] resolve will look up to config.json and find mapped implementation class
@@ -19,7 +22,7 @@ public class Main {
 		Container container;
 		try {
 			container = new Container("config.json");
-			com.levo.ioc.IMeeting meeting = container.resolve(com.levo.ioc.IMeeting.class);	// [1]
+			com.levo.stuff.IMeeting meeting = container.resolve(com.levo.stuff.IMeeting.class);	// [1]
 			meeting.getMeeting();
 			for(String attendee : meeting.getAttendees()) {
 				System.out.println(attendee);

@@ -1,4 +1,4 @@
-package com.levo.ioc;
+package com.levo.stuff;
 
 public class MeetingService implements IMeetingService {
 
