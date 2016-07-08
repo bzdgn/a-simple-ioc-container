@@ -138,9 +138,30 @@ public class Container {
 	}
 	
 	private boolean primitivesMatch(Class argumentClass, Class parameterClass) {
-		if( (argumentClass == int.class || argumentClass == Integer.class) && (parameterClass == int.class || false) )
-			;
-		
+		if( (argumentClass == int.class || argumentClass == Integer.class) && (parameterClass == int.class || parameterClass == Integer.class) ) {
+			return true;
+		}
+		if( (argumentClass == byte.class || argumentClass == Byte.class) && (parameterClass == byte.class || parameterClass == Byte.class) ) {
+			return true;
+		}
+		if( (argumentClass == short.class || argumentClass == Short.class) && (parameterClass == short.class || parameterClass == Short.class) ) {
+			return true;
+		}
+		if( (argumentClass == long.class || argumentClass == Long.class) && (parameterClass == long.class || parameterClass == Long.class) ) {
+			return true;
+		}
+		if( (argumentClass == char.class || argumentClass == Character.class) && (parameterClass == char.class || parameterClass == Character.class) ) {
+			return true;
+		}
+		if( (argumentClass == double.class || argumentClass == Double.class) && (parameterClass == double.class || parameterClass == Double.class) ) {
+			return true;
+		}
+		if( (argumentClass == float.class || argumentClass == Float.class) && (parameterClass == float.class || parameterClass == Float.class) ) {
+			return true;
+		}
+		if( (argumentClass == boolean.class || argumentClass == Boolean.class) && (parameterClass == boolean.class || parameterClass == Boolean.class) ) {
+			return true;
+		}
 		return false;
 	}
 	
